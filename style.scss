@@ -75,6 +75,7 @@ body {
         object-fit: cover;
         object-position: right; //let image go inside from right 
         mix-blend-mode: multiply ; // mix color with background
+        opacity: 0.8;
         }
       }
     }
@@ -98,7 +99,7 @@ body {
           line-height: 1.25;
           span {
             color: $Soft-violet-accent ;
-            // gradinet text animation
+            // gradinet text animationf
             background: linear-gradient(270deg, 
             hsl(277, 64%, 61%), 
             hsl(247, 64%, 61%), 
@@ -211,3 +212,14 @@ body {
     }
    }
   }
+
+@media (prefers-reduced-motion) {
+ .container{
+  &_description{
+   &__stats {
+    //  no animation for readers with vestibular motion disorders
+     animation:none;
+    }
+  }
+}
+}

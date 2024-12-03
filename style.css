@@ -57,6 +57,7 @@ body {
   object-fit: cover;
   object-position: right;
   mix-blend-mode: multiply;
+  opacity: 0.8;
 }
 .container__description {
   flex: 0 0 auto;
@@ -171,5 +172,10 @@ body {
   .container__description__stats-value {
     margin: 1rem;
     place-items: center;
+  }
+}
+@media (prefers-reduced-motion) {
+  .container_description__stats {
+    animation: none;
   }
 }/*# sourceMappingURL=style.css.map */
